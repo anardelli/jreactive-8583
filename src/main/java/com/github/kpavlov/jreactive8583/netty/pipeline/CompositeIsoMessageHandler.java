@@ -36,8 +36,9 @@ public class CompositeIsoMessageHandler<T extends IsoMessage> extends ChannelInb
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         if (msg instanceof IsoMessage) {
             doHandleMessage(ctx, msg);
+        } else {
+            super.channelRead(ctx, msg);
         }
-        super.channelRead(ctx, msg);
     }
 
     private void doHandleMessage(ChannelHandlerContext ctx, Object msg) {
