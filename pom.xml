@@ -13,6 +13,13 @@
     </description>
 
     <url>https://github.com/kpavlov/jreactive-8583</url>
+         
+         <repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
 
     <properties>
         <java.version>1.8</java.version>
@@ -74,11 +81,11 @@
     </developers>
 
     <dependencies>
-        <dependency>
-            <groupId>net.sf.j8583</groupId>
-            <artifactId>j8583</artifactId>
-            <version>${j8583.version}</version>
-        </dependency>
+             <dependency>
+	    <groupId>com.github.iDTLabssl</groupId>
+	    <artifactId>j8583</artifactId>
+	    <version>master-SNAPSHOT</version>
+	</dependency>
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
